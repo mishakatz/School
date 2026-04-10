@@ -14,6 +14,12 @@
     margin: 8px;
   }
   pre { margin: 13px 0; white-space: pre; }
+  .prose {
+    margin: 13px 0;
+    white-space: pre-line;
+    max-width: 45ch;
+  }
+  .art-d { display: none; }
   body { background: #000; }
   body, a, a:visited { color: #d9d9d9; }
   body.light { background: #fff; }
@@ -23,19 +29,30 @@
     font: inherit; color: inherit;
     text-decoration: none; cursor: pointer;
   }
+  @media (min-width: 700px) {
+    body { font-size: 20px; margin: 32px 40px; }
+    .art-m { display: none; }
+    .art-d { display: block; }
+    .prose { max-width: 70ch; }
+  }
 </style>
 </head>
-<body><a class="theme-toggle" href="#" onclick="return toggleTheme()">[o]</a><pre>
- _                    
+<body><a class="theme-toggle" href="#" onclick="return toggleTheme()">[o]</a><pre class="art-m">
+_                    
 |_   _  _  _|_o _ ._  
 |_&gt;&lt;(/_(_|_||_|(_)| | 
-                      
+</pre><pre class="art-d">
+ ______                     _   _             
+|  ____|                   | | (_)            
+| |__  __  _____  ___ _   _| |_ _  ___  _ __  
+|  __| \ \/ / _ \/ __| | | | __| |/ _ \| &#x27;_ \ 
+| |____ &gt;  &lt;  __/ (__| |_| | |_| | (_) | | | |
+|______/_/\_\___|\___|\__,_|\__|_|\___/|_| |_|
+                                              
+                                              
+</pre><div class="prose">Как человек реализует замысел руками
 
-Как человек реализует замысел руками
-
-Это ремесло, техника, точность, доведение,
-контроль над формой
-и результатом.
+Это ремесло, техника, точность, доведение, контроль над формой и результатом.
 
 Что сюда входит:
 
@@ -84,8 +101,7 @@
 - контраст и настроение
 - поведение материалов
 - визуальная цельность кадра
-- разница между &quot;дорого выглядит&quot; и &quot;дешёвый
-  CGI&quot;
+- разница между &quot;дорого выглядит&quot; и &quot;дешёвый CGI&quot;
 
 Умения:
 
@@ -110,8 +126,7 @@
 - делать loop-анимации
 - использовать движение как часть идеи
 - собирать короткие motion-сцены
-- делать ролики, которые работают как
-  демонстрация формы и смысла
+- делать ролики, которые работают как демонстрация формы и смысла
 
 5. Генеративка, код, AI
 
@@ -129,8 +144,7 @@
 - строить rule-based системы
 - управлять вариациями
 - автоматизировать рутину
-- использовать AI как инструмент, а не
-  костыль
+- использовать AI как инструмент, а не костыль
 - доводить результат дизайнерски
 
 6. Доведение
@@ -146,8 +160,7 @@
 - редактировать свою работу
 - убирать лишнее
 - усиливать акцент
-- доводить до публикуемого состояния
-</pre><script>
+- доводить до публикуемого состояния</div><script>
 if (localStorage.theme === 'light') document.body.classList.add('light');
 function toggleTheme() {
   var l = document.body.classList.toggle('light');

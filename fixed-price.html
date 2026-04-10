@@ -14,6 +14,12 @@
     margin: 8px;
   }
   pre { margin: 13px 0; white-space: pre; }
+  .prose {
+    margin: 13px 0;
+    white-space: pre-line;
+    max-width: 45ch;
+  }
+  .art-d { display: none; }
   body { background: #000; }
   body, a, a:visited { color: #d9d9d9; }
   body.light { background: #fff; }
@@ -23,21 +29,30 @@
     font: inherit; color: inherit;
     text-decoration: none; cursor: pointer;
   }
+  @media (min-width: 700px) {
+    body { font-size: 20px; margin: 32px 40px; }
+    .art-m { display: none; }
+    .art-d { display: block; }
+    .prose { max-width: 70ch; }
+  }
 </style>
 </head>
-<body><a class="theme-toggle" href="#" onclick="return toggleTheme()">[o]</a><pre>
- _           _          
+<body><a class="theme-toggle" href="#" onclick="return toggleTheme()">[o]</a><pre class="art-m">
+_           _          
 |_o   _  _| |_)._o _ _  
 | |&gt;&lt;(/_(_| |  | |(_(/_ 
-                        
+</pre><pre class="art-d">
+ ______ _              _   _____      _          
+|  ____(_)            | | |  __ \    (_)         
+| |__   ___  _____  __| | | |__) | __ _  ___ ___ 
+|  __| | \ \/ / _ \/ _` | |  ___/ &#x27;__| |/ __/ _ \
+| |    | |&gt;  &lt;  __/ (_| | | |   | |  | | (_|  __/
+|_|    |_/_/\_\___|\__,_| |_|   |_|  |_|\___\___|
+                                                 
+                                                 
+</pre><div class="prose">Фиксированная цена
 
-Фиксированная цена
-
-Цена участия в Школе и Клубе будет расти по
-ходу наполнения базы контента. Повышение цен
-для участников Клуба из &quot;Founders 100&quot;
-заморожено на год с момента регистрации.
-</pre><script>
+Цена участия в Школе и Клубе будет расти по ходу наполнения базы контента. Повышение цен для участников Клуба из &quot;Founders 100&quot; заморожено на год с момента регистрации.</div><script>
 if (localStorage.theme === 'light') document.body.classList.add('light');
 function toggleTheme() {
   var l = document.body.classList.toggle('light');
