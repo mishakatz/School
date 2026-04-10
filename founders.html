@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=460">
 <title>founders</title>
 <style>
@@ -140,5 +143,11 @@ function toggleTheme() {
   localStorage.theme = l ? 'light' : 'dark';
   return false;
 }
+document.querySelectorAll('a').forEach(function(a) {
+  var h = a.getAttribute('href');
+  if (h && !/^(https?:|#|mailto:)/.test(h)) {
+    a.href = h + (h.indexOf('?') >= 0 ? '&' : '?') + '_=' + Date.now();
+  }
+});
 </script></body>
 </html>
