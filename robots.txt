@@ -1,2 +1,11 @@
-User-agent: *
+User-agent: Googlebot
 Disallow: /
+
+User-agent: Yandexbot
+Disallow: /
+
+User-agent: bingbot
+Disallow: /
+
+User-agent: *
+Allow: /
