@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="viewport" content="width=460">
+<title>404</title>
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+    font-size: 14px;
+    background: #000;
+    color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  body.light { background: #fff; color: #1a1a1a; }
+  body.light a, body.light a:visited { color: #1a1a1a; }
+  a, a:visited { color: #d9d9d9; }
+  pre { margin: 0 0 1em 0; white-space: pre; }
+  .msg { margin-top: 0.5em; }
+  .theme-toggle {
+    position: fixed; top: 4px; right: 8px;
+    font: inherit; color: inherit;
+    text-decoration: none; cursor: pointer;
+  }
+  @media (min-width: 700px) {
+    body { font-size: 20px; }
+  }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XK2GS7S8DX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XK2GS7S8DX');
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108506833', 'ym');
+
+    ym(108506833, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/108506833" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+<a class="theme-toggle" href="#" onclick="return toggleTheme()">[o]</a>
+<pre>
+  ____   ____  _____   _____
+ / __ \ / __ \|  __ \ / ____|
+| |  | | |  | | |__) | (___
+| |  | | |  | |  ___/ \___ \
+| |__| | |__| | |     ____) | _ _
+ \____/ \____/|_|    |_____(_|_|_)
+</pre>
+<div class="msg">Что-то пошло не так. Напишите <a href="https://t.me/mishakatz">Кацу</a>.</div>
+<script>
+if (localStorage.theme === 'light') document.body.classList.add('light');
+function toggleTheme() {
+  var l = document.body.classList.toggle('light');
+  localStorage.theme = l ? 'light' : 'dark';
+  return false;
+}
+</script>
+</body>
+</html>
